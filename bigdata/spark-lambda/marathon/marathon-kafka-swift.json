@@ -1,0 +1,25 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "spark/lambda",
+      "network": "HOST",
+      "portMappings": []
+    },
+	"volumes": []
+  },
+  "id": "/spark/lambda-kafka-swift",
+  "instances": 1,
+  "cpus": 0.1,
+  "mem": 128,
+  "uris": [],
+  "env":{
+	  "SPARK_MASTER":"your mesos master",
+	  "SPARK_JOB_LOCATION":"--class mytest.spark.stream.TwitterPopularTagsKafkaToSwift spark_lambda.jar 198.23.98.115:2181,198.23.85.80:2181,198.23.85.94:2181 mygroup tweet_tags 1 swift://ylspark.sjc01/tweet_tags_json_new",
+	  "SPARK_DRIVER_HOST":"mesos slave host",
+	  "SPARK_CORES_MAX": "4",
+	  "SPARK_EXECUTOR_URI":"your uploaded spark-1.4.1-bin-custom-spark-softlayer.tgz",
+	  "SPARK_ADDITIONAL_CONFIG": "--packages org.apache.spark:spark-streaming-kafka_2.10:1.4.1 --conf spark.ui.port=4059"
+  },
+  "constraints": [["hostname", "CLUSTER", "the same mesos slave host as SPARK_DRIVER_HOST "]]
+}

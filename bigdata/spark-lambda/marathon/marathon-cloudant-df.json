@@ -1,0 +1,23 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "spark/lambda",
+      "network": "HOST",
+      "portMappings": []
+    },
+	"volumes": []
+  },
+  "id": "/spark/lambda-cloudant-df",
+  "instances": 1,
+  "cpus": 0.2,
+  "mem": 256,
+  "uris": [],
+  "env":{
+	  "SPARK_MASTER":"your mesos master",
+	  "SPARK_JOB_LOCATION":"python/CloudantDF.py",
+	  "SPARK_EXECUTOR_URI":"http://d3kbcqa49mib13.cloudfront.net/spark-1.4.1-bin-hadoop2.6.tgz",
+	  "SPARK_DRIVER_HOST":"mesos slave host"
+  },
+  "constraints": [["hostname", "CLUSTER", "the same mesos slave host as SPARK_DRIVER_HOST "]]
+}

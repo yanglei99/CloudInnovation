@@ -1,0 +1,21 @@
+{
+	"container": {
+		    "type": "DOCKER",
+		    "docker": {
+		      "image": "kafka/scheduler",
+		      "network": "HOST",
+		      "portMappings": []
+		    }
+		  },
+  "id": "/kafka/scheduler",
+  "instances": 1,
+  "cpus": 0.5,
+  "mem": 256,
+  "uris": [],
+  "env": {
+    "MESOS_MASTER": "zk://198.23.98.115:2181,198.23.85.80:2181,198.23.85.94:2181/mesos",
+    "KAFKA_ZK": "198.23.98.115:2181,198.23.85.80:2181,198.23.85.94:2181",
+    "HOST_IP": "198.23.98.101"
+  },
+  "constraints": [["hostname", "CLUSTER", "198.23.98.101"]]
+}
