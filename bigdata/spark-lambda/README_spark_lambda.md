@@ -11,7 +11,7 @@ A Lambda Architecture Implentation with Spark Stream, Spark SQL, Kafka, Cloudant
 
 ### Pre-req for Swift related jobs
 
-* [Spark distribution with Swift and Softlayer Object Storage support](../spark-standalone/README_sSpark.md)
+* [Spark distribution with Swift and Softlayer Object Storage support](../spark-standalone/README_spark.md)
 
 * Need to copy the 2 files under lib before building Docker Image
 
