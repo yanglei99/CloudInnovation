@@ -1,13 +1,14 @@
-# Spark on Mesos
-
 ## Mesos Framework - Spark 
 
 [Referece Run Spark on Mesos](http://spark.apache.org/docs/latest/running-on-mesos.html)
 
+![Image of Spark on Mesos](../../doc/images/spark_mesos.jpg)
 
 ## A Lambda Architecture Scenario
 
 A Lambda Architecture Implentation with Spark Stream, Spark SQL, Kafka, Cloudant, Swift(Softlayer Object Storage)
+
+![Image of Lambda using Spark on Mesos](../../doc/images/spark_lambda.jpg)
 
 ### Pre-req for Swift related jobs
 

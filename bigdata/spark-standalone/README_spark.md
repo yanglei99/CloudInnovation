@@ -2,6 +2,7 @@
 
 [Reference Spark Standlone](http://spark.apache.org/docs/latest/spark-standalone.html#installing-spark-standalone-to-a-cluster)
 
+![Image of Spark Standalone](../../doc/images/spark_standalone.jpg)
 
 ### Build 
 

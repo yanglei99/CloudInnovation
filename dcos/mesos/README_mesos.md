@@ -3,6 +3,8 @@
 * [Reference Mesos Cluster](http://mesos.apache.org/gettingstarted/)
 * [Reference Mesosphere Download](https://mesosphere.com/downloads/)
 
+![Image of Mesoss](../../doc/images/mesos.jpg)
+
 
 ### Install 3 Masters Cluster
 

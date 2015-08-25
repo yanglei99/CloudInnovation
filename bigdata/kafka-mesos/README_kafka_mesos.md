@@ -1,10 +1,10 @@
-# Kafka on Mesos
-
 ## Mesos Framework - Kafka 
 
 [Reference here](https://github.com/mesos/kafka)
 
 Kafka Scheduler is built in Docker and run on Mesos through Marathon.
+
+![Image of Kafka on Mesos](../../doc/images/kafka_mesos.jpg)
 
 
 ### TO Build and Run 
