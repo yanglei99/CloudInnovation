@@ -15,7 +15,7 @@
   "uris": [],
   "env":{
 	  "SPARK_MASTER":"your mesos master",
-	  "SPARK_JOB_LOCATION":"--class mytest.spark.stream.TwitterPopularTagsKafkaToSwift spark_lambda.jar 198.23.98.115:2181,198.23.85.80:2181,198.23.85.94:2181 mygroup tweet_tags 1 swift://ylspark.sjc01/tweet_tags_json_new",
+	  "SPARK_JOB_LOCATION":"--class mytest.spark.stream.TwitterPopularTagsKafkaToSwift spark_lambda.jar $yourZK mygroup tweet_tags 1 swift://$yourContainer.$yourSwiftProvider/tweet_tags_json_new",
 	  "SPARK_DRIVER_HOST":"mesos slave host",
 	  "SPARK_CORES_MAX": "4",
 	  "SPARK_EXECUTOR_URI":"your uploaded spark-1.4.1-bin-custom-spark-softlayer.tgz",

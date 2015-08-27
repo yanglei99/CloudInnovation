@@ -1,0 +1,11 @@
+{ 
+	"schedule": "R10/2015-08-26T20:00:00Z/PT2M", 
+	"name": "SAMPLE_JOB1", 
+	"epsilon": "PT24H", 
+	"command": "echo  echo $(hostname) $(date) 'Ping'", 
+	"owner": "yanglei@us.ibm.com", 
+	"async": false ,
+    "cpus":0.1,
+	"disk":10,
+	"mem":128
+}

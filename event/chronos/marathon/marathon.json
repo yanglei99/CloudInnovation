@@ -1,0 +1,21 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "dcos/chronos",
+      "network": "HOST",
+      "portMappings": [
+      ]
+    },
+	"volumes": []
+  },
+  "id": "dcos/chronos-cassandra",
+  "instances": 1,
+  "cpus": 0.2,
+  "mem": 216,
+  "uris": [],
+  "env":{
+	  "MASTER": "zk://your zk emsemble/mesos",
+	  "ZK_HOSTS": "your zk emsemble"
+  }
+}

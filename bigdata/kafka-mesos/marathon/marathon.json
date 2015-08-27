@@ -13,9 +13,9 @@
   "mem": 256,
   "uris": [],
   "env": {
-    "MESOS_MASTER": "zk://198.23.98.115:2181,198.23.85.80:2181,198.23.85.94:2181/mesos",
-    "KAFKA_ZK": "198.23.98.115:2181,198.23.85.80:2181,198.23.85.94:2181",
-    "HOST_IP": "198.23.98.101"
+    "MESOS_MASTER": "zk://your zk ensemble/mesos",
+    "KAFKA_ZK": "your zk ensemble",
+    "HOST_IP": "your host"
   },
-  "constraints": [["hostname", "CLUSTER", "198.23.98.101"]]
+  "constraints": [["hostname", "CLUSTER", "the same as HOST_IP"]]
 }

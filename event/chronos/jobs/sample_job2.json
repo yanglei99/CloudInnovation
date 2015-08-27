@@ -1,0 +1,17 @@
+{
+    "async": false,
+    "command": "echo  echo $(hostname) $(date) 'Pong'",
+    "epsilon": "PT30M",
+    "errorCount": 0,
+    "lastError": "",
+    "lastSuccess": "",
+    "name": "SAMPLE_JOB2",
+    "owner": "yanglei@us.ibm.com",
+    "parents": [
+        "SAMPLE_JOB1"
+    ],
+    "retries": 2,
+    "cpus":0.1,
+	"disk":10,
+	"mem":128
+}

@@ -15,7 +15,7 @@
   "uris": [],
   "env":{
 	  "SPARK_MASTER":"your mesos master",
-	  "SPARK_JOB_LOCATION":"--class mytest.spark.stream.TwitterPopularTagsToKafka spark_lambda.jar uLhhDpaWOieV57usXUu5g MS16cFefRqP5p5zY3kUYLW1VQctWgjOTeqHrQv43g 1428526002-cnO4XO6nZLeEHHszzKOwCqvOrTQyleBmZwlb0jY xzvKdRKGZ4bKJE50r69vMRQDiTciIiXoUUs8gIrtcwekS 10.53.71.124:31000,10.90.81.136:31000,10.53.71.124:7000 tweet_tags",
+	  "SPARK_JOB_LOCATION":"--class mytest.spark.stream.TwitterPopularTagsToKafka spark_lambda.jar $yourConsumerKey $yourConsumerSecret $yourAccessToken $yourAccessTokenSecret  $yourKafka tweet_tags",
 	  "SPARK_DRIVER_HOST":"mesos slave host",
 	  "SPARK_CORES_MAX": "4",
 	  "SPARK_EXECUTOR_URI":"http://d3kbcqa49mib13.cloudfront.net/spark-1.4.1-bin-hadoop2.6.tgz",

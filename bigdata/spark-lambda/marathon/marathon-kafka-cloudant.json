@@ -15,7 +15,7 @@
   "uris": [],
   "env":{
 	  "SPARK_MASTER":"your mesos master",
-	  "SPARK_JOB_LOCATION":"--class mytest.spark.stream.TwitterPopularTagsKafkaToCloudant spark_lambda.jar 198.23.98.115:2181,198.23.85.80:2181,198.23.85.94:2181 mygroup tweet_tags 1 yanglei.cloudant.com ntledesewstarkalkedirsee b0VbcAS7davOYC0f4umPC2BR",
+	  "SPARK_JOB_LOCATION":"--class mytest.spark.stream.TwitterPopularTagsKafkaToCloudant spark_lambda.jar $yourZK mygroup tweet_tags 1 $yourCLoudant $yourCloudantUser $yourCloudantAPIKey",
 	  "SPARK_DRIVER_HOST":"mesos slave host",
 	  "SPARK_CORES_MAX": "4",
 	  "SPARK_EXECUTOR_URI":"http://d3kbcqa49mib13.cloudfront.net/spark-1.4.1-bin-hadoop2.6.tgz",

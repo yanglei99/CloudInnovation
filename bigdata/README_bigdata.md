@@ -1,7 +1,7 @@
 
 ## Big Data Analytics
 
-Exploitation in Big Data Analytics, in areas of 
+Exploitation of Big Data Analytics, in areas of 
 
 * Spark. (SQL over Cloudant, Streaming over Kafka, Swift and Softlayer Object Storage Integration..)
 * Lambda Architecture with Spark
