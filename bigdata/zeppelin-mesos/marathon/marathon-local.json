@@ -1,0 +1,18 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "spark/zeppelin",
+      "network": "HOST",
+      "portMappings": [ ]
+    },
+	"volumes": []
+  },
+  "id": "/spark/zeppelin-local",
+  "instances": 1,
+  "cpus": 1,
+  "mem": 1024,
+  "uris": [],
+  "env":{
+  }
+}

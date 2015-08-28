@@ -1,0 +1,22 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "spark/zeppelin",
+      "network": "HOST",
+      "portMappings": [ ]
+    },
+	"volumes": []
+  },
+  "id": "/spark/zeppelin-mesos",
+  "instances": 1,
+  "cpus": 1,
+  "mem": 1024,
+  "uris": [],
+  "env":{
+	  "MASTER": "mesos://zk://your ZK emsemble/mesos",
+	  "SPARK_EXECUTOR_URI":"https://s3-us-west-1.amazonaws.com/mydata.yl/spark-1.4.1-bin-custom-spark-softlayer.tgz",
+	  "SPARK_DRIVER_HOST":"your host IP"
+  }
+  "constraints": [["hostname", "CLUSTER", "the same as SPARK_DRIVER_HOST"]]
+}
