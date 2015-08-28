@@ -14,4 +14,4 @@ Exploitation of Big Data Analytics, in areas of
 * [Provision Spark Standlone Cluster](spark-standalone/README_spark.md)
 * [Kafka Cluster on Mesos](kafka-mesos/README_kafka_mesos.md)
 * [A Lambda Architecture using Spark run on Mesos](spark-lambda/README_spark_lambda.md)
-* [Zeppelin Notebook for Interative Big Data Analytics on Mesos](zeppelin-mesos/mesos/README_zeppelin_mesos.md)
+* [Zeppelin Notebook for Interative Big Data Analytics on Mesos](zeppelin-mesos/README_zeppelin_mesos.md)
