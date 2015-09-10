@@ -9,7 +9,7 @@
 	
 	curl -i -H 'Content-Type: application/json' -d@marathon/marathon.json $marathonIp:8080/v2/apps
 	
-* [revise the downloaded Cassandra on Mesos](marathon/marathon.json). The Cassandra contact points:
+* [revise the downloaded Cassandra on Mesos](marathon/marathon.json).
 
 
 ### Verification

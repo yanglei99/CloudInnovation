@@ -1,0 +1,22 @@
+{ 
+	"name": "airline_delay_avg_cloudant_cloudant_airport", 
+	"container": {
+	    "type": "DOCKER",
+	     "image": "YOUR_REGISTRY/spark/data-pipeline",
+	     "network": "HOST",
+	     "portMappings": [],
+		"volumes": []
+	},
+	"epsilon": "PT24H", 
+	"command": "export SPARK_JOB_LOCATION='python/DelayAvg_Cloudant.py YOUR_CLOUDANT_HOST YOUR_CLOUDANT_USER YOUR_CLOUDANT_APIKEY airline_delays_mca airport airline_delays_mca_airport' && export SPARK_DRIVER_HOST=$(ip addr show eth1 | awk '/inet / {print $2}' | cut -d/ -f1) && export SPARK_CORES_MAX=2 && export SPARK_ADDITIONAL_CONFIG='--conf spark.ui.port=4059' && export SPARK_MASTER=YOUR_MESOS_MASTER && ./run.sh ", 
+	"owner": "yanglei@us.ibm.com", 
+    "parents": [
+                "airline_delay_avg_cloudant_cloudant_mca"
+            ],
+	"async": false ,
+    "retries": 2,
+    "cpus":0.1,
+	"disk":10,
+	"mem":128,
+	"uris": []
+}

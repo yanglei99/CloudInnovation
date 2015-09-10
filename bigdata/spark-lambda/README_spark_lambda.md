@@ -8,7 +8,9 @@
 
 A Lambda Architecture Implentation with Spark Stream, Spark SQL, Kafka, Cloudant, Swift(Softlayer Object Storage)
 
-![Image of Lambda using Spark on Mesos](../../doc/images/spark_lambda.jpg)
+![Image of Lambda using Spark](../../doc/images/spark_lambda.jpg)
+
+![Image of Lambda using Spark on Mesos](../../doc/images/spark_lambda_mesos.jpg)
 
 ### Pre-req for Swift related jobs
 
