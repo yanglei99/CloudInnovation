@@ -1,0 +1,23 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "ml/sparkling-h20",
+      "network": "HOST",
+      "forcePullImage": true,
+      "portMappings": [ ]
+    },
+	"volumes": [
+	]
+  },
+  "id": "/ml/sparkling-h20-mesos",
+  "instances": 1,
+  "cpus": 1,
+  "mem": 1024,
+  "uris": [],
+  "env":{
+	  "MASTER": "your mesos master",
+	  "SPARK_EXECUTOR_URI":"http://apache.cs.utah.edu/spark/spark-1.5.1/spark-1.5.1-bin-hadoop2.6.tgz",
+	  "SPARK_USE_DOCKER_HOST":"true"
+  }
+}

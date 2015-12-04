@@ -7,6 +7,7 @@ Exploitation of Big Data Analytics, in areas of
 * Lambda Architecture with Spark
 * Event Driven Data Pipleline with Spark
 * Zeppelin Notebook
+* Deep Learning with H2o and Sparkling Water
 * ... and many more
 
 
@@ -17,3 +18,4 @@ Exploitation of Big Data Analytics, in areas of
 * [A Lambda Architecture using Spark run on Mesos](spark-lambda/README_spark_lambda.md)
 * [Event Driven Data Pipeline using Spark run on Mesos](spark-data-pipeline/README_spark_data_pipeline.md)
 * [Zeppelin Notebook for Interative Big Data Analytics on Mesos](zeppelin-mesos/README_zeppelin_mesos.md)
+* [Deep Learning with H2o and Sparking Water](deep-learning/README_deep_learning.md)

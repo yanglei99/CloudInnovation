@@ -1,0 +1,20 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "ml/sparkling-h20",
+      "network": "HOST",
+      "portMappings": [ ]
+    },
+	"volumes": [
+	]
+  },
+  "id": "/ml/sparkling-h20-local",
+  "instances": 1,
+  "cpus": 1,
+  "mem": 1024,
+  "uris": [],
+  "env":{
+	  "SPARK_ADDITIONAL_CONFIG":"--conf spark.executor.memory=2g --conf spark.locality.wait=30000"
+  }
+}
