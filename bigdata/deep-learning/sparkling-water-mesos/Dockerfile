@@ -4,7 +4,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Yang Lei <yanglei@us.ibm.com>
 
-# Folder structure:On one of the LSF master nodes
+# Folder structure:
 #        Dockerfile
 #        script/
 #				the .sh for installation and run application
