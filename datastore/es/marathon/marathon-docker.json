@@ -1,0 +1,17 @@
+{
+  "id": "es-docker",
+  "container": {
+    "docker": {
+      "image": "elasticsearch:2.1.0",
+      "network": "HOST"
+    }
+  },
+  "args": ["-Dcluster.name=es-docker", "-Dnetwork.publish_host=_eth1_"],
+  "cpus": 2,
+  "mem": 2048,
+  "env": {
+  },
+  "instances": 1,
+  "constraints": [["size", "CLUSTER", "m"],["hostname", "UNIQUE"]]
+
+}

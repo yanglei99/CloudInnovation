@@ -1,12 +1,12 @@
 {
-  "id": "elasticsearch-mesos-scheduler",
+  "id": "mesos-ha-cluster",
   "container": {
     "docker": {
       "image": "mesos/elasticsearch-scheduler",
       "network": "HOST"
     }
   },
-  "args": ["--zookeeperMesosUrl", "your mesos zk address"],
+  "args": ["--zookeeperMesosUrl", "zk://198.23.98.115:2181,198.23.85.80:2181,198.23.85.94:2181/mesos", "--elasticsearchClusterName", "mesos-ha-cluster"],
   "cpus": 0.2,
   "mem": 512.0,
   "env": {
