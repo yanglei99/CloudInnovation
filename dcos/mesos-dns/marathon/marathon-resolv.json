@@ -1,0 +1,15 @@
+{
+  "id": "mesos-dns-resolv",
+  "cpus": 0.1,
+  "mem": 50,
+  "uris":[
+          "where to download your mesos-dns-resolv-run.sh",
+          "http://stedolan.github.io/jq/download/linux64/jq"
+         ],
+  "instances": 1,
+  "cmd":"chmod +x *.sh && chmod +x jq && ./mesos-dns-resolv-run.sh",
+  "env":{
+	  "MESOS_DNS_MARATHON":"http://<Marathon IP>:8080/v2/apps/mesos-dns"
+  },
+  "constraints": [["size", "CLUSTER", "m"],["hostname", "UNIQUE"]]
+}

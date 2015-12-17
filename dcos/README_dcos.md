@@ -12,3 +12,4 @@ Data Center OS is the cloud platform.  Exploitation in areas of
 ## The Scenarios 
 
 * [Mesos Cluster](mesos/README_mesos.md)
+* [Mesos DNS](mesos-dns/README_mesos_dns.md)

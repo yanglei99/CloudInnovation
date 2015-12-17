@@ -1,0 +1,27 @@
+{
+  "id": "mesos-dns",
+  "container": {
+    "docker": {
+      "image": "mesosphere/mesos-dns",
+      "network": "HOST",
+     "portMappings": [ ]
+    },
+	"volumes": [
+	    {
+	    	"containerPath": "/config.json",
+	    	"hostPath": "./config.json",
+	    	"mode": "RW"
+	    }
+	]
+  },
+  "cpus": 1,
+  "mem": 1024,
+  "env": {
+  },
+  "uris":[
+          "where to download your config.json"
+         ],
+  "instances": 1,
+  "cmd":"/mesos-dns -config=/config.json",
+  "constraints": [["hostname", "CLUSTER", "your host"]]
+}
