@@ -1,0 +1,18 @@
+{
+  "id": "cassandra-docker",
+  "container": {
+    "docker": {
+      "image": "cassandra:3.0.1",
+      "network": "HOST"
+    }
+  },
+  "args": [],
+  "cpus": 2,
+  "mem": 2048,
+  "env": {
+	  "CASSANDRA_BROADCAST_ADDRESS":"the host"
+  },
+  "instances": 1,
+  "constraints": [["hostname", "CLUSTER", "the host"]]
+
+}

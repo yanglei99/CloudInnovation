@@ -11,10 +11,10 @@
     "https://downloads.mesosphere.io/java/jre-7u76-linux-x64.tar.gz"
   ],
   "env": {
-    "MESOS_ZK": "zk://your zk ensemble/mesos",
+    "MESOS_ZK": "mesos zk address",
     "JAVA_OPTS": "-Xms256m -Xmx256m",
     "CASSANDRA_CLUSTER_NAME": "dev-test",
-    "CASSANDRA_ZK": "zk://your zk ensemble/cassandra-mesos",
+    "CASSANDRA_ZK": "cassandra zk address",
     "CASSANDRA_NODE_COUNT": "3",
     "CASSANDRA_RESOURCE_CPU_CORES": "2.0",
     "CASSANDRA_RESOURCE_MEM_MB": "2048",
@@ -42,5 +42,6 @@
       "protocol": "HTTP",
       "timeoutSeconds": 5
     }
-  ]
+  ],
+  "constraints": [["hostname", "CLUSTER", "some host"]]
 }

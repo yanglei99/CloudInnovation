@@ -12,6 +12,6 @@
   "env": {
   },
   "instances": 1,
-  "constraints": [["size", "CLUSTER", "m"],["hostname", "UNIQUE"]]
+  "constraints": [["size", "CLUSTER", "m"],["hostname", "UNIQUE"],["hostname", "UNLIKE","host of es-docker"]]
 
 }
