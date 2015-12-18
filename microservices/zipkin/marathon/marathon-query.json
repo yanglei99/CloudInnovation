@@ -1,0 +1,22 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "openzipkin/zipkin-query:1.26.0",
+      "network": "HOST",
+      "forcePullImage": true,
+      "portMappings": [ ]
+    }
+  },
+  "id": "zipkin-query",
+  "instances": 1,
+  "cpus": 0.5,
+  "mem": 512,
+  "uris": [],
+  "env":{
+	  "CASSANDRA_CONTACT_POINTS":"your cassandra hosts",
+	  "STORAGE_TYPE": "cassandra",
+	  "TRANSPORT_TYPE": "http"
+  },
+  "constraints": [["hostname", "CLUSTER", "your host"]]
+}

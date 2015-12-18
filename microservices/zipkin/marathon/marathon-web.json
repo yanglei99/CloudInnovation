@@ -1,0 +1,21 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "openzipkin/zipkin-web:1.26.0",
+      "network": "HOST",
+      "forcePullImage": true,
+      "portMappings": [ ]
+    }
+  },
+  "id": "zipkin-web",
+  "instances": 1,
+  "cpus": 0.5,
+  "mem": 512,
+  "uris": [],
+  "env":{
+	  "QUERY_PORT_9411_TCP_ADDR":"your query host",
+	  "TRANSPORT_TYPE": "http"
+  },
+   "constraints": []
+}

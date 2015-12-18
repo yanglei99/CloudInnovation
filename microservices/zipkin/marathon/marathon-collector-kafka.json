@@ -1,0 +1,24 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "openzipkin/zipkin-collector:1.26.0",
+      "network": "HOST",
+      "forcePullImage": true,
+      "portMappings": []
+    }
+  },
+  "id": "zipkin-collector-kafka",
+  "instances": 1,
+  "cpus": 0.5,
+  "mem": 512,
+  "uris": [],
+  "env":{
+	  "CASSANDRA_CONTACT_POINTS":"your cassandra hosts",
+	  "TRANSPORT_TYPE":"scribe",
+	  "STORAGE_TYPE":"cassandra",
+	  "KAFKA_ZOOKEEPER":"your zk",
+	  "KAFKA_TOPIC":"myziplin"
+  },
+  "constraints": [["size", "CLUSTER", "s"],["hostname", "UNIQUE"]]
+}

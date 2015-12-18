@@ -25,3 +25,4 @@ Even though the explorations are done on Softlayer, an IaaS provider, most artif
 * [Big Data Analytics](bigdata/README_bigdata.md)
 * [Scalable Data Store](datastore/README_datastore.md)
 * [Event Driven Scheduling](event/README_event.md)
+* [Micro Services](microservices/README_ms.md)
