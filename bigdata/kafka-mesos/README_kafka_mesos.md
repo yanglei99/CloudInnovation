@@ -1,6 +1,6 @@
 ## Mesos Framework - Kafka 
 
-[Reference here](https://github.com/mesos/kafka)
+[Mesos Kafka Framework](https://github.com/mesos/kafka)
 
 Kafka Scheduler is built in Docker and run on Mesos through Marathon.
 
@@ -21,14 +21,13 @@ Kafka Scheduler is built in Docker and run on Mesos through Marathon.
 
 ### Manage Brokers using REST API
 
-     curl http://$HOST_IP:7000/api/brokers/add?id=0..2&cpus=1&mem=1024
-     curl http://$HOST_IP:7000/api/brokers/start?id=0..2
+     curl http://$HOST_IP:7000/api/broker/list
 
-     curl http://$HOST_IP:7000/api/brokers/status?id=0..2
+     curl http://$HOST_IP:7000/api/broker/add?broker=0..2&cpus=1&mem=1024
+     curl http://$HOST_IP:7000/api/broker/start?broker=0..2
 
-     curl http://$HOST_IP:7000/api/brokers/stop?id=0..2
-
-	 curl http://$HOST_IP:7000/api/brokers/remove?id=0..2
+     curl http://$HOST_IP:7000/api/broker/stop?broker=0..2
+	 curl http://$HOST_IP:7000/api/broker/remove?broker=0..2
 
 
 ### To verify
@@ -47,7 +46,7 @@ Topic will be automatically created by the broker, you can also do the following
 
 Get the broker endpoints
 
-	curl http://$HOST_IP:7000/api/brokers/status
+	curl http://$HOST_IP:7000/api/broker/list
 
 Produce Message
 
@@ -63,7 +62,7 @@ Produce Message
 
 [revise kafka_wordcount.py](python/kafka_wordcount.py) 
 
-	spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.3.1 kafka_wordcount.py $KAFKA_ZK mytopic
+	spark-submit --packages org.apache.spark:spark-streaming-kafka_2.10:1.5.1 kafka_wordcount.py $KAFKA_ZK mytopic
 
 ## Other use cases
 
