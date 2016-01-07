@@ -1,0 +1,19 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "mashape/kong",
+      "network": "HOST",
+      "forcePullImage": true,
+      "parameters": [],
+      "portMappings": [ ]
+    }
+  },
+  "id": "mashape-kong",
+  "instances": 1,
+  "cpus": 0.5,
+  "mem": 512,
+  "uris": [],
+  "env":{
+  }
+}

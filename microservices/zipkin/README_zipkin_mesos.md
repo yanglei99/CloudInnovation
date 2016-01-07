@@ -46,6 +46,11 @@
 	cd zipkin
 	bin/tracegen $COLLECTOR_HOST_IP
 	
+#### Other Zipkin integrations
+
+[AcmeAir NodeJS](https://github.com/yanglei99/acmeair-nodejs)
+
+	
 #### Aggregate dependencies using Spark
 
 	git clone https://github.com/openzipkin/zipkin-dependencies-spark.git
