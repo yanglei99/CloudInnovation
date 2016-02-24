@@ -47,14 +47,14 @@ sed -i -e "s/%jobmanager%/$FLINK_JOBMANAGER_HOST/g" $CONF/flink-conf.yaml
 
 echo "config file: " && cat $CONF/flink-conf.yaml
 
-if [ "$FLINK_PROCESS_NAME" = "jobmanager" ]; then
+if [ "$FLINK_PROCESS_NAME" == "jobmanager" ]; then
     echo "Configuring Job Manager on this node"
     $EXEC/jobmanager.sh start cluster
     $EXEC/start-webclient.sh > $FLINK_HOME/log/start.log
-elif [ "$FLINK_PROCESS_NAME" = "taskmanager" ]; then
+elif [ "$FLINK_PROCESS_NAME" == "taskmanager" ]; then
     echo "Configuring Task Manager on this node"
     $EXEC/taskmanager.sh start > $FLINK_HOME/log/start.log
-elif  [ "$FLINK_PROCESS_NAME" = "application" ]; then
+elif  [ "$FLINK_PROCESS_NAME" == "application" ]; then
 	if [ "$FLINK_APP_JOB" != "" ]; then
 		echo "Run flink application: $FLINK_APP_JOB"
 		$EXEC/flink run -m $FLINK_JOBMANAGER_HOST:6123 $FLINK_APP_JOB
