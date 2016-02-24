@@ -1,0 +1,16 @@
+{
+  "id": "flink/taskmanager",
+  "container": {
+    "docker": {
+      "image": "yanglei99/flink",
+      "network": "HOST"
+    }
+  },
+  "cpus": 1,
+  "mem": 1024,
+  "env": {
+	  "FLINK_PROCESS_NAME":"taskmanager"
+  },
+  "instances": 2,
+  "constraints": [["hostname", "UNIQUE"]]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "flink/dataflow",
+  "container": {
+    "docker": {
+      "image": "yanglei99/flink",
+      "network": "HOST"
+    } ,
+	"volumes": [
+			      {
+			    	  "containerPath": "/flink/job/flink-dataflow-0.2.jar",
+			    	  "hostPath": "./flink-dataflow-0.2.jar",
+			          "mode": "RW"
+			      }
+			] 
+  },
+  "cpus": 1,
+  "mem": 1024,
+  "uris": [
+           "https://s3-us-west-1.amazonaws.com/mydata.yl/flink-dataflow-0.2.jar"
+           ],
+  "env": {
+	  "FLINK_PROCESS_NAME":"application",
+	  "FLINK_APP_JOB":"/flink/job/flink-dataflow-0.2.jar --input=file:///usr/local/flink-0.10.2/conf/flink-conf.yaml --output=file:///usr/local/flink-0.10.2/conf/flink-conf.yaml.out"
+  },
+  "instances": 1
+}

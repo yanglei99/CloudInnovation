@@ -1,0 +1,15 @@
+{
+  "id": "flink/wordcount",
+  "container": {
+    "docker": {
+      "image": "yanglei99/flink",
+      "network": "HOST"
+    }  },
+  "cpus": 1,
+  "mem": 1024,
+  "env": {
+	  "FLINK_PROCESS_NAME":"application",
+	  "FLINK_APP_JOB":"/usr/local/flink-0.10.2/examples/WordCount.jar file:///usr/local/flink-0.10.2/conf/flink-conf.yaml file:///flink/job/wordcount.out"
+  },
+  "instances": 1
+}

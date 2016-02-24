@@ -1,0 +1,15 @@
+{
+  "id": "flink/jobmanager",
+  "container": {
+    "docker": {
+      "image": "yanglei99/flink",
+      "network": "HOST"
+    }
+  },
+  "cpus": 1,
+  "mem": 1024,
+  "env": {
+  },
+  "instances": 1,
+  "constraints": [["hostname", "UNIQUE"]]
+}
