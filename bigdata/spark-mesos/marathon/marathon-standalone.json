@@ -28,10 +28,8 @@
            "https://s3-us-west-1.amazonaws.com/mydata.yl/cloudant-spark.jar"
            ],
   "env":{
-      "cloudant_host": "your host",
-      "cloudant_username":"your username",
-      "cloudant_password": "your password",
 	  "SPARK_MASTER_ID": "spark/master",
+	  "SPARK_ADDITIONAL_CONFIG":"--conf spark.cloudant.host=your.host--conf spark.cloudant.username=your.username --conf spark.cloudant.password=your.password",
 	  "SPARK_ADDITIONAL_JARS":"--jars cloudant-spark.jar",
 	  "SPARK_JOB": "CloudantDF.py"
   }
