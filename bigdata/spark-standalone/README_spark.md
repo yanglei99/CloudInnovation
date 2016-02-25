@@ -1,4 +1,6 @@
-## Spark Standalone Cluster
+## Spark Standalone Cluster (Outdated)
+
+[Please reference docker mesos approach](../spark-mesos/README_spark_mesos.md)
 
 [Reference Spark Standlone](http://spark.apache.org/docs/latest/spark-standalone.html#installing-spark-standalone-to-a-cluster)
 
