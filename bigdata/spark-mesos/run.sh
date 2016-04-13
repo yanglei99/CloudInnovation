@@ -20,9 +20,9 @@ echo calculate Spark Driver Host
 export SPARK_DRIVER_HOST=$(ip addr show eth1 | awk '/inet / {print $2}' | cut -d/ -f1)
 
 if [[ ! -z $SPARK_DRIVER_HOST ]]; then 
+	export LIBPROCESS_IP=$SPARK_DRIVER_HOST
 	export SPARK_PUBLIC_DNS=$SPARK_DRIVER_HOST
 	export SPARK_LOCAL_IP=$SPARK_DRIVER_HOST
-	export SPARK_LOCAL_HOSTNAME=$SPARK_DRIVER_HOST
 fi
 
 env | grep SPARK
@@ -40,7 +40,7 @@ elif [ "$SPARK_PROCESS_NAME" == "slave" ]; then
 elif  [ "$SPARK_PROCESS_NAME" == "application" ]; then
 	if [ "$SPARK_JOB" != "" ]; then
 		echo "Run Spark application: $SPARK_JOB"
-		mycmd="$SPARK_HOME/bin/spark-submit --master=$SPARK_MASTER  --conf spark.driver.host=$SPARK_DRIVER_HOST --conf spark.mesos.coarse=$SPARK_MESOS_COARSE $SPARK_ADDITIONAL_CONFIG $SPARK_ADDITIONAL_JARS $SPARK_JOB"
+		mycmd="$SPARK_HOME/bin/spark-submit --master $SPARK_MASTER  --conf spark.driver.host=$SPARK_DRIVER_HOST --conf spark.mesos.coarse=$SPARK_MESOS_COARSE $SPARK_ADDITIONAL_CONFIG $SPARK_ADDITIONAL_JARS $SPARK_JOB"
 		echo $mycmd
 		eval $mycmd 
 		echo "End of job" >  $SPARK_HOME/logs/end.log
