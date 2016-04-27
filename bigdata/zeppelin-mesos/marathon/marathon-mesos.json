@@ -6,17 +6,29 @@
       "network": "HOST",
       "portMappings": [ ]
     },
-	"volumes": []
+	"volumes": [
+	    {
+	    	"containerPath": "/zeppelin/incubator-zeppelin/notebook",
+	    	"hostPath": "/root/zeppelin/data",
+	    	"mode": "RW"
+	    },
+	      {
+	    	  "containerPath": "/zeppelin/incubator-zeppelin/jars/cloudant-spark.jar",
+	    	  "hostPath": "./cloudant-spark.jar",
+	          "mode": "RW"
+	      }
+	]
   },
+  "acceptedResourceRoles": ["slave_public"],
   "id": "/spark/zeppelin-mesos",
   "instances": 1,
   "cpus": 1,
   "mem": 1024,
-  "uris": [],
+  "uris": [
+           "https://s3-us-west-1.amazonaws.com/mydata.yl/cloudant-spark.jar"
+           ],
   "env":{
-	  "MASTER": "mesos://zk://your ZK emsemble/mesos",
-	  "SPARK_EXECUTOR_URI":"https://s3-us-west-1.amazonaws.com/mydata.yl/spark-1.4.1-bin-custom-spark-softlayer.tgz",
-	  "SPARK_DRIVER_HOST":"your host IP"
+	  "MASTER": "mesos://zk://leader.mesos:2181/mesos",
+	  "SPARK_SUBMIT_OPTIONS":"--conf spark.mesos.executor.docker.image=yanglei99/spark_mesos"
   }
-  "constraints": [["hostname", "CLUSTER", "the same as SPARK_DRIVER_HOST"]]
 }

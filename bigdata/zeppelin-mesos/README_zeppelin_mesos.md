@@ -10,8 +10,7 @@
 
 [The image details](Dockerfile)
 
-* Spark 1.4.1 with Hadoop 2.6 supporting SL Object Storage
-* Download Spark SQL Cloudant 1.4.1.1
+* Spark 1.6.1 with Hadoop 2.6
 
 ### Start on Marathon:
 	
@@ -29,6 +28,4 @@
 
 ### Known Issue
 
-* Mesos not working.  [all "/" in ZEPPELIN_JAVA_OPTS are converted to "." when content wrapped in ""](https://issues.apache.org/jira/browse/ZEPPELIN-266)
-* Mesos not working. [ Executor Spark home `spark.mesos.executor.home` is not set! when ZEPPELIN_JAVA_OPTS not wrapped with ""](https://issues.apache.org/jira/browse/ZEPPELIN-120)
 

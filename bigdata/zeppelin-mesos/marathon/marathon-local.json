@@ -6,13 +6,28 @@
       "network": "HOST",
       "portMappings": [ ]
     },
-	"volumes": []
+	"volumes": [	    
+	  {
+    	"containerPath": "/zeppelin/incubator-zeppelin/notebook",
+    	"hostPath": "/root/zeppelin/data",
+    	"mode": "RW"
+      },
+      {
+    	  "containerPath": "/zeppelin/incubator-zeppelin/jars/cloudant-spark.jar",
+    	  "hostPath": "./cloudant-spark.jar",
+          "mode": "RW"
+      }
+
+    ]
   },
+  "acceptedResourceRoles": ["slave_public"],
   "id": "/spark/zeppelin-local",
   "instances": 1,
   "cpus": 1,
   "mem": 1024,
-  "uris": [],
+  "uris": [
+           "https://s3-us-west-1.amazonaws.com/mydata.yl/cloudant-spark.jar"
+           ],
   "env":{
   }
 }

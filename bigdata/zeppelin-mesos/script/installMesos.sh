@@ -1,18 +1,26 @@
 #!/bin/bash
 
-# Prep the environment
+# Install JDK 8
 
-apt-get update && apt-get install -y autoconf libtool build-essential python-dev python-boto libcurl4-nss-dev libsasl2-dev maven libapr1-dev libsvn-dev wget curl
+apt-get install -y software-properties-common
+add-apt-repository ppa:openjdk-r/ppa
+apt-get update 
+apt-get install -y openjdk-8-jdk
 
-# Install JDK
+java -version
+ls -l /usr/lib/jvm/java-8-openjdk-amd64/
 
-apt-get install -y openjdk-7-jdk 
+# Install Mesos reference https://mesosphere.com/downloads/
 
-# Install Mesos
+# Setup
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF
+DISTRO=$(lsb_release -is | tr '[:upper:]' '[:lower:]')
+CODENAME=$(lsb_release -cs)
 
-cd /root
+# Add the repository
+echo "deb http://repos.mesosphere.io/${DISTRO} ${CODENAME} main" | \
+  sudo tee /etc/apt/sources.list.d/mesosphere.list
+sudo apt-get -y update
 
-wget http://downloads.mesosphere.io/master/ubuntu/14.04/mesos_0.23.0-1.0.ubuntu1404_amd64.deb
-
-dpkg -i mesos_0.23.0-1.0.ubuntu1404_amd64.deb &&  apt-get install -y -f 
+sudo apt-get -y install mesos
 
