@@ -17,8 +17,9 @@ Exploitation of Big Data Analytics, in areas of
 * [Spark Cluster and Dataflow/Beam](spark-mesos/README_spark_mesos.md)
 * [Flink Cluster and Dataflow/Beam](flink-mesos/README_flink.md)
 * [Kafka Cluster on Mesos](kafka-mesos/README_kafka_mesos.md)
+* [MQTT connects IoT devices to Cloud datastore](mqtt-mesos/README_mqtt_mesos.md)
+* [Zeppelin Notebook for Interactive Big Data Analytics on Mesos](zeppelin-mesos/README_zeppelin_mesos.md)
 * [A Lambda Architecture using Spark run on Mesos](spark-lambda/README_spark_lambda.md)
 * [Event Driven Data Pipeline using Spark run on Mesos](spark-data-pipeline/README_spark_data_pipeline.md)
-* [Zeppelin Notebook for Interative Big Data Analytics on Mesos](zeppelin-mesos/README_zeppelin_mesos.md)
 * [Deep Learning with H2o and Sparking Water](deep-learning/README_deep_learning.md)
 

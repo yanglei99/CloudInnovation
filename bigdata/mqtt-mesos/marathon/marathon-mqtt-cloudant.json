@@ -1,0 +1,41 @@
+{
+	  "container": {
+		    "type": "DOCKER",
+		    "docker": {
+		      "image": "yanglei99/spark_mesos",
+		      "network": "HOST",
+		      "portMappings": [ ]
+		    },
+			"volumes": [
+			      {
+			    	  "containerPath": "/spark/job/mqtt_ingest.py",
+			    	  "hostPath": "./mqtt_ingest.py",
+			          "mode": "RW"
+			      },
+			      {
+			    	  "containerPath": "/spark/job/cloudant-spark.jar",
+			    	  "hostPath": "./cloudant-spark.jar",
+			          "mode": "RW"
+			      }
+			]
+		  },
+    "id": "mqtt.cloudant",
+    "cpus": 1,
+    "mem": 1024,
+    "instances": 1,
+    "acceptedResourceRoles": ["slave_public"],
+    "uris": [
+             "https://s3-us-west-1.amazonaws.com/mydata.yl/mqtt_ingest.py",
+             "https://s3-us-west-1.amazonaws.com/mydata.yl/cloudant-spark.jar"
+             ],
+    "env": {
+    	"MQTT_HOST":"mqtt.marathon.mesos",
+        "FORMAT":"com.cloudant.spark",
+        "DATASTORE":"mqtt_air",
+        "SCHEMA_TYPE":"LongType,StringType,LongType,LongType,LongType,LongType,LongType,LongType,LongType,LongType",
+		"SCHEMA_FIELD":"station_id,time,PM25_AQI_value,PM10_AQI_value,NO2_AQI_value,temperature,pressure,humidity,wind,weather",
+        "SPARK_ADDITIONAL_CONFIG":"--conf spark.cores.max=6 --conf spark.executor.memory=2g --conf spark.executor.cores=2 --conf spark.mesos.executor.docker.image=yanglei99/spark_mesos --conf spark.cloudant.host=YOUR_HOST --conf spark.cloudant.username=YOUR_NAME --conf spark.cloudant.password=YOUR_PASSWORD",
+        "SPARK_ADDITIONAL_JARS":"--repositories https://repo.eclipse.org/content/repositories/paho-releases/ --packages org.apache.spark:spark-streaming-mqtt_2.10:1.6.1 --jars cloudant-spark.jar",
+        "SPARK_JOB": "mqtt_ingest.py"
+    }
+}

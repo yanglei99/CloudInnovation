@@ -1,0 +1,17 @@
+{
+  "id": "mqtt",
+  "container": {
+    "docker": {
+      "image": "mqtt",
+      "network": "HOST"
+    } ,
+	"volumes": [] 
+  },
+  "acceptedResourceRoles": ["slave_public"],
+  "cpus": 1,
+  "mem": 1024,
+  "uris": [ ],
+  "env": {
+  },
+  "instances": 1
+}
