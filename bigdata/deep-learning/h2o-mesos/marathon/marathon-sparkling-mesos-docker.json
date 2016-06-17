@@ -1,0 +1,30 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+        "image": "yanglei99/spark_mesos",
+        "network": "HOST",
+        "portMappings": [ ]
+    },
+	"volumes": [
+	      	  {
+	      	  	  "containerPath": "/spark/job/examples/smalldata/craigslistJobTitles.csv",
+	      		  "hostPath": "./craigslistJobTitles.csv",
+	      	      "mode": "RW"
+	      	  }
+    ]
+  },
+  "id": "sparkling-mesos",
+  "instances": 1,
+  "cpus": 1,
+  "mem": 1024,
+  "uris": [
+           "https://s3-us-west-1.amazonaws.com/mydata.yl/craigslistJobTitles.csv"
+           ],
+  "env":{
+	  "SPARK_MASTER":"mesos://zk://leader.mesos:2181/mesos",
+      "SPARK_ADDITIONAL_CONFIG":"--conf spark.mesos.executor.docker.image=yanglei99/spark_mesos",
+	  "SPARK_ADDITIONAL_JARS": "--packages ai.h2o:sparkling-water-core_2.10:1.6.5,ai.h2o:sparkling-water-examples_2.10:1.6.5 ",
+	  "SPARK_JOB": "--class org.apache.spark.examples.h2o.CraigslistJobTitlesApp /dev/null"
+  }
+}

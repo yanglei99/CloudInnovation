@@ -2,17 +2,17 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "ml/h2o",
+      "image": "yanglei99/h2oai",
       "network": "HOST",
       "portMappings": [ ]
     },
 	"volumes": []
   },
-  "id": "/ml/h2o",
+  "id": "h2oai",
   "instances": 1,
-  "cpus": 0.2,
-  "mem": 256,
+  "cpus": 2,
+  "mem": 2048,
   "uris": [],
   "env":{},
-  "cmd":"java -Xmx4g -jar /opt/h2o.jar"
+  "cmd":"java -Xmx2g -jar /opt/h2o.jar"
 }
