@@ -1,0 +1,24 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "yanglei99/fabric-peer",
+      "network": "HOST",
+      "parameters": [],
+      "portMappings": []
+    },
+	"volumes": [
+	]
+  },
+  "id": "/hyperledger/vp0",
+  "instances": 1,
+  "cpus": 3,
+  "mem": 4096,
+  "uris": [],
+  "cmd" : "peer node start",
+  "env":{
+	  "CORE_VM_ENDPOINT":"http://172.17.0.1:2375",
+	  "CORE_PEER_ID":"vp0",
+	  "CORE_PEER_ADDRESSAUTODETECT":"true"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "yanglei99/fabric-peer",
+      "network": "HOST",
+      "parameters": [],
+      "portMappings": []
+    },
+	"volumes": [
+	]
+  },
+  "id": "/hyperledger/chaincode/invoke",
+  "instances": 1,
+  "cpus": 1,
+  "mem": 1024,
+  "uris": [],
+  "cmd" : "peer chaincode invoke -n YOUR_CHAIN_CODE_NAME -c '{\"Function\": \"invoke\", \"Args\": [\"a\", \"b\", \"10\"]}' && echo end > end.log && tail -f end.log",
+  "env":{
+	  "CORE_PEER_ADDRESS":"vp1.hyperledger.marathon.slave.mesos:30303"
+  }
+}

@@ -8,6 +8,7 @@ This is the project captures the exploration of latest Cloud Technologies, in ar
 * Scalable Data Store
 * Event Driven Scheduling
 * Micro-Service Architecture
+* Smart Contract
 * DevOps
 * ... and many more
 
@@ -26,3 +27,4 @@ Even though the explorations are done on Softlayer, an IaaS provider, most artif
 * [Scalable Data Store](datastore/README_datastore.md)
 * [Event Driven Scheduling](event/README_event.md)
 * [Micro-Services](microservices/README_ms.md)
+* [Smart Contact](smartcontract/README_sc.md)
