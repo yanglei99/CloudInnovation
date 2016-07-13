@@ -17,6 +17,6 @@
   "uris": [],
   "cmd" : "peer chaincode query -l golang -n YOUR_CHAIN_CODE_NAME -c '{\"Function\": \"query\", \"Args\": [\"a\"]}' && echo end > end.log && tail -f end.log",
   "env":{
-	  "CORE_PEER_ADDRESS":"vp0.hyperledger.marathon.slave.mesos:30303"
+	  "CORE_PEER_ADDRESS":"vp.hyperledger.marathon.slave.mesos:30303"
   }
 }

@@ -10,7 +10,7 @@
 	"volumes": [
 	]
   },
-  "id": "/hyperledger/vp1",
+  "id": "/hyperledger/vp2",
   "instances": 1,
   "cpus": 3,
   "mem": 4096,
@@ -18,8 +18,14 @@
   "cmd" : "peer node start",
   "env":{
 	  "CORE_VM_ENDPOINT":"http://172.17.0.1:2375",
-	  "CORE_PEER_ID":"vp1",
+	  "CORE_PEER_ID":"vp2",
 	  "CORE_PEER_ADDRESSAUTODETECT":"true",
-	  "CORE_PEER_DISCOVERY_ROOTNODE":"vp.hyperledger.marathon.slave.mesos:30303"
+	  "CORE_PEER_DISCOVERY_ROOTNODE":"vp.hyperledger.marathon.slave.mesos:30303",
+	  "CORE_PBFT_GENERAL_N":"4",
+	  "CORE_PBFT_GENERAL_K":"2",
+	  "CORE_PEER_VALIDATOR_CONSENSUS_PLUGIN":"pbft",
+	  "CORE_PBFT_GENERAL_TIMEOUT_REQUEST":"10s",
+	  "CORE_PBFT_GENERAL_MODE":"batch",
+	  "CORE_PBFT_GENERAL_BATCHSIZE":"1"
   }
 }
